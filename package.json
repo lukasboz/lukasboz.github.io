@@ -3,15 +3,16 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" --",
-    "preview": "vite preview",
-    "build-only": "vite build",
-    "type-check": "vue-tsc --build",
-    "lint": "eslint . --fix",
-    "format": "prettier --write src/"
-  },
+"scripts": {
+  "dev": "vite",
+  "build": "run-p type-check \"build-only {@}\" --",
+  "preview": "vite preview",
+  "build-only": "vite build",
+  "type-check": "vue-tsc --build",
+  "lint": "eslint . --fix",
+  "format": "prettier --write src/",
+  "deploy": "npm run build && gh-pages -d dist"
+},
   "dependencies": {
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
@@ -26,6 +27,7 @@
     "@vue/tsconfig": "^0.7.0",
     "eslint": "^9.14.0",
     "eslint-plugin-vue": "^9.30.0",
+    "gh-pages": "^6.2.0",
     "npm-run-all2": "^7.0.2",
     "prettier": "^3.3.3",
     "typescript": "~5.6.3",
