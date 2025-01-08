@@ -1,0 +1,89 @@
+.App {
+    background-color: #FFFFFF;
+    text-align: center;
+  }
+  
+  .lukasinfo {
+    display: flex;
+    padding-top: 1rem;
+    padding-bottom: 1.25rem;
+    flex-direction: row; /* Ensure items are in a row */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    margin: 0 auto; /* Center the lukasinfo div itself */
+  }
+  
+  .namediv {
+    display: flex;
+    flex-direction: column;
+    margin-left: 4rem;
+  }
+  
+  .name {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0.25rem; /* Set equal margin for top and bottom */
+  }
+  
+  .hello, .fsd {
+    font-size: 1.5rem;
+    margin: 0.25rem; /* Set equal margin for top and bottom */
+  }
+  
+  .expframe {
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    flex-direction: row; /* Ensure items are in a row */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    gap: 1rem; /* Add some spacing between the boxes */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+  }
+  
+  .exp {
+    border: 0.25em solid #000000;
+    padding: 1rem; /* Adjust padding to fit more content */
+    font-size: 0.875rem; /* Adjust font size to fit more content */
+    font-weight: bold;
+    margin: 0.25rem;
+    flex: 1 1 20rem; /* Allow the boxes to grow and shrink */
+    max-width: 42.5rem; /* Set a maximum width */
+    min-width: 20rem; /* Set a minimum width */
+    height: 20rem; /* Set a fixed height for uniform size */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    text-align: left; /* Left justify the text */
+    overflow: auto; /* Allow scrolling if content overflows */
+  }
+  
+  .exp h1{
+    margin: 0;
+    font-size: 2.25rem;
+    padding-bottom: 1rem;
+  }
+  
+  .exp ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Create a 2-column grid */
+    gap: 0.5rem; /* Add some spacing between the grid items */
+  }
+  
+  .exp li {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem; /* Add some spacing between list items */
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .exp {
+      flex: 1 1 100%; /* Make the boxes take full width on smaller screens */
+      max-width: 100%;
+    }
+  
+    .exp ul {
+      grid-template-columns: 1fr; /* Change to a single column on smaller screens */
+    }
+  }
