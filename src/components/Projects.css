@@ -1,0 +1,38 @@
+.App {
+    background-color: #FFFFFF;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 0.33s forwards;
+  }
+  
+  .ptitle {
+    font-size: 3.125rem; /* Ensure the font-size is applied */
+    margin: 0; /* Reset margin if needed */
+    padding-top: 1.33rem;
+    padding-bottom: 1.33rem; /* Reset padding if needed */
+  }
+  
+  .expframe {
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    flex-direction: row; /* Ensure items are in a row */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    gap: 1rem; /* Add some spacing between the boxes */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+  
+  .exp {
+    border: 0.125em solid #000000;
+    border-radius: 2rem;
+    padding: 1rem; /* Adjust padding to fit more content */
+    font-size: 0.875rem; /* Adjust font size to fit more content */
+    margin: 0.25rem;
+    flex: 1 1 20rem; /* Allow the boxes to grow and shrink */
+    max-width: 42.5rem; /* Set a maximum width */
+    min-width: 20rem; /* Set a minimum width */
+    height: 20rem; /* Set a fixed height for uniform size */
+  }

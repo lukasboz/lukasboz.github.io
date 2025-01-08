@@ -46,6 +46,7 @@ function SplashScreen({ onFinished }) {
 
       <div className="bottomtext">
         <h1>Welcome to Lukas Bozinov's Software Portfolio!</h1>
+        <h6>Loading...</h6>
       </div>
 
     </div>
