@@ -10,7 +10,10 @@ const Navbar = () => {
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
       </ul>
-      <ul className="nav-buttons">        
+      <ul className="nav-buttons">
+        <li><a href="mailto:lukasbozinov@gmail.com">
+          <img src="/mail2.png" alt="Gmail" width="37.5"></img>
+        </a></li>        
         <li><a href="https://github.com/lukasboz">
           <img src="/github_white.png" alt="GitHub" width="37.5"></img>
         </a></li>

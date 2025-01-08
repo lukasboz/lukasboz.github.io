@@ -1,8 +1,40 @@
 .App {
+  background-color: #FFFFFF;
   text-align: center;
-  background-color: #333333;
 }
 
-#div{
-  color: #333333;
+.lukasinfo {
+  display: flex;
+  padding-top: 5rem;
+  flex-direction: row; /* Ensure items are in a row */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  margin: 0 auto; /* Center the lukasinfo div itself */
+}
+
+.namediv {
+  display: flex;
+  flex-direction: column;
+  margin-left: 4rem;
+}
+
+.name {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0.25rem; /* Set equal margin for top and bottom */
+}
+
+.hello, .fsd {
+  font-size: 1.5rem;
+  margin: 0.25rem; /* Set equal margin for top and bottom */
+}
+
+.expframe {
+  background-color: gray;
+  display: flex;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  flex-direction: row; /* Ensure items are in a row */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
 }
