@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div className="aboutmeroot">
         <Navbar />
-        <h1 className='aboutmetitle'>――――――――――――&nbsp; About Me &nbsp;――――――――――――</h1>
+        <h1 className='aboutmetitle'>About Me</h1>
 
         <div className='aboutmeframe'>
           <div className='aboutmeelement'>

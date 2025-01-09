@@ -7,7 +7,7 @@ const Projects = () => {
   return (
     <div className='app1'>
         <Navbar />
-        <h1 className='ptitle'>――――――――――&nbsp; My Top 3 Projects &nbsp;――――――――――</h1>
+        <h1 className='ptitle'>My Top 3 Projects</h1>
   
         <div className='expframep'>
           <div className='expp'>
