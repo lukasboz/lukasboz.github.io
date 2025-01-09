@@ -69,7 +69,7 @@ const Home = () => {
       {showSplash ? (
         <SplashScreen onFinished={handleSplashFinished} />
       ) : (
-<div className='App'>
+      <div className='App'>
         <Navbar />
         <div className='lukasinfo'>
           <div className='lukaspic'>

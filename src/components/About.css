@@ -1,0 +1,106 @@
+.aboutmeroot {
+    background-color: #FFFFFF;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInp 0.33s forwards;
+  }
+  
+  .aboutmetitle {
+    font-size: 3.125rem; /* Ensure the font-size is applied */
+    margin: 0; /* Reset margin if needed */
+    padding-top: 1.33rem;
+  }
+
+  .aboutmeframe {
+    display: flex;
+    flex: 1 1 20rem; /* Adjust the flex properties as needed */
+    margin: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .aboutmeelement {
+    display: flex; /* Ensure flexbox is applied */
+    flex-direction: column; /* Stack items vertically */
+    align-items: left; /* Center items horizontally */
+    justify-content: flex-start; /* Align items at the top vertically */
+    border: 0.125em solid #000000;
+    border-radius: 2rem;
+    padding: 1rem; /* Adjust padding to fit more content */
+    margin: 0.25rem;
+    flex: 1 1 20rem; /* Allow the boxes to grow and shrink */
+    max-width: 99rem; /* Set a maximum width */
+    min-width: 20rem; /* Set a minimum width */
+    height: 34rem; /* Set a fixed height for uniform size */
+    text-align: left; /* Center text inside the boxes */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    overflow: hidden; /* Hide overflowing content */
+  }
+
+  #whoiam {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  #whoiamdesc {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  #maininterests {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  #maininterestsdesc {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  
+  .hobbies {
+    display: flex; /* Ensure flexbox is applied */
+    flex-direction: column; /* Stack items vertically */
+    align-items: left; /* Center items horizontally */
+    justify-content: flex-start; /* Align items at the top vertically */
+    border: 0.125em solid #000000;
+    border-radius: 2rem;
+    padding: 1rem; /* Adjust padding to fit more content */
+    margin: 0.25rem;
+    flex: 1 1 20rem; /* Allow the boxes to grow and shrink */
+    max-width: 36rem; /* Set a maximum width */
+    min-width: 20rem; /* Set a minimum width */
+    height: 34rem; /* Set a fixed height for uniform size */
+    text-align: left; /* Center text inside the boxes */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    overflow: hidden; /* Hide overflowing content */
+  }
+
+  #hobby {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  #hobbydesc {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .activitylist {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+  }
+  
+  .activitylist li {
+    background-color: #f0f0f0; /* Light background color */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 0.5rem 1rem; /* Padding inside the list items */
+    margin-bottom: 0.5rem; /* Space between list items */
+    font-size: 1rem; /* Font size */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+  }

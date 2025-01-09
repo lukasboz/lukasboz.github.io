@@ -1,38 +1,81 @@
-.App {
-    background-color: #FFFFFF;
-    text-align: center;
-    opacity: 0;
-    animation: fadeIn 0.33s forwards;
+.app1 {
+  background-color: #FFFFFF;
+  text-align: center;
+  opacity: 0;
+  animation: fadeInp 0.33s forwards;
+}
+
+.ptitle {
+  font-size: 3.125rem; /* Ensure the font-size is applied */
+  margin: 0; /* Reset margin if needed */
+  padding-top: 1.33rem;
+  padding-bottom: 1.33rem; /* Reset padding if needed */
+}
+
+.expframep {
+  display: flex;
+  margin-bottom: 2rem;
+  flex-direction: row; /* Ensure items are in a row */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  gap: 1rem; /* Add some spacing between the boxes */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.expp {
+  display: flex; /* Ensure flexbox is applied */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: flex-start; /* Align items at the top vertically */
+  border: 0.125em solid #000000;
+  border-radius: 2rem;
+  padding: 1rem; /* Adjust padding to fit more content */
+  font-size: 0.875rem; /* Adjust font size to fit more content */
+  margin: 0.25rem;
+  flex: 1 1 20rem; /* Allow the boxes to grow and shrink */
+  max-width: 42.5rem; /* Set a maximum width */
+  min-width: 20rem; /* Set a minimum width */
+  height: 34.5rem; /* Set a fixed height for uniform size */
+  text-align: center; /* Center text inside the boxes */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.image {
+  border: 0.05rem solid #000000; /* Apply border correctly */
+  max-width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.repobtn {
+  background-color: #000000;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 0.125rem solid #000000;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  margin-top: 0.5rem; /* Add a small margin to separate from authors */
+}
+
+.repobtn:hover {
+  background-color: #ffffff;
+  color: black;
+  border: 0.125rem solid #000000;
+}
+
+.authors {
+  margin-top: auto; /* Push the authors to the bottom */
+  margin-bottom: 0.5rem; /* Add a small margin to separate from button */
+}
+
+@keyframes fadeInp {
+  to {
+    opacity: 1;
   }
-  
-  .ptitle {
-    font-size: 3.125rem; /* Ensure the font-size is applied */
-    margin: 0; /* Reset margin if needed */
-    padding-top: 1.33rem;
-    padding-bottom: 1.33rem; /* Reset padding if needed */
-  }
-  
-  .expframe {
-    display: flex;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-    flex-direction: row; /* Ensure items are in a row */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
-    gap: 1rem; /* Add some spacing between the boxes */
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    padding-right: 1rem;
-    padding-left: 1rem;
-  }
-  
-  .exp {
-    border: 0.125em solid #000000;
-    border-radius: 2rem;
-    padding: 1rem; /* Adjust padding to fit more content */
-    font-size: 0.875rem; /* Adjust font size to fit more content */
-    margin: 0.25rem;
-    flex: 1 1 20rem; /* Allow the boxes to grow and shrink */
-    max-width: 42.5rem; /* Set a maximum width */
-    min-width: 20rem; /* Set a minimum width */
-    height: 20rem; /* Set a fixed height for uniform size */
-  }
+}
