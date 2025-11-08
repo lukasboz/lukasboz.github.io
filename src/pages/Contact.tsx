@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import Navigation from "@/components/Navigation";
+import { Link } from "react-router-dom";
 import { Mail, MapPin, Phone, Github, Linkedin } from "lucide-react";
 
 const Contact = () => {
@@ -188,9 +189,9 @@ const Contact = () => {
           </p>
           <div className="flex gap-4 justify-center animate-fade-in [animation-delay:400ms]">
             <Button size="lg" className="shadow-glow hover:scale-105 transition-transform duration-200">
-              <a href="/projects" rel="noopener noreferrer">
-                    View My Work
-              </a>
+                <Link to="/projects" rel="noopener noreferrer">
+                  View My Work
+                </Link>
             </Button>
             <Button variant="outline" size="lg" className="hover:scale-105 transition-transform duration-200">
               <a href="https://github.com/lukasboz/lukasboz/blob/main/lukas-resume.pdf" target="_blank" rel="noopener noreferrer">
