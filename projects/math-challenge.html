@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math Challenge Platform | Lukas Bozinov</title>
+  <meta name="description" content="Real-time multiplayer math challenge platform built with React, Node.js, Socket.io, and MongoDB.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>L</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">lukas<span>.</span></a>
+      <div class="nav-links" id="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../projects.html" class="active">Projects</a>
+        <a href="../contact.html" class="btn btn-primary nav-cta">Let's Talk</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Project Header -->
+  <div class="project-detail-header">
+    <div class="container reveal">
+      <a href="../projects.html" style="color: var(--text-muted); font-size: 0.9rem; display: inline-flex; align-items: center; gap: 6px; margin-bottom: 24px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back to Projects
+      </a>
+      <h1>Real-Time Multiplayer Math Challenge Platform</h1>
+      <p class="section-desc">An educational multiplayer platform where players compete in real-time math challenges, built for seamless user interactions and competitive gameplay.</p>
+      <div class="project-meta">
+        <div class="project-meta-item">
+          <span class="project-meta-label">Role</span>
+          <span class="project-meta-value">Full-Stack Developer</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="project-meta-label">Type</span>
+          <span class="project-meta-value">Full-Stack Application</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="project-meta-label">Stack</span>
+          <span class="project-meta-value">React, Node.js, Socket.io, MongoDB</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project Content -->
+  <section class="project-detail-content">
+    <div class="container">
+      <div class="project-hero-image reveal">
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#e87461" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+      </div>
+
+      <div class="reveal">
+        <h2>Overview</h2>
+        <p>This project is a real-time educational multiplayer math challenge platform designed for seamless user interactions. Players can join game sessions, compete against each other in timed math challenges, and track their performance over time.</p>
+      </div>
+
+      <div class="reveal">
+        <h2>Technical Implementation</h2>
+        <p>The frontend was built with ReactJS to deliver a responsive, dynamic user interface. Real-time communication between players is handled through Socket.io, enabling instant updates during gameplay without page refreshes.</p>
+        <p>The backend runs on Node.js, managing game logic, user sessions, and API endpoints. MongoDB handles persistent data storage including user profiles, game history, and leaderboard data.</p>
+      </div>
+
+      <div class="reveal">
+        <h2>Key Features</h2>
+        <ul>
+          <li>Real-time multiplayer gameplay with Socket.io for instant communication</li>
+          <li>Responsive frontend UI/UX built with React</li>
+          <li>Persistent user data and game history with MongoDB</li>
+          <li>Competitive leaderboard and scoring system</li>
+          <li>Optimized development pipeline using Vite, Babel.js, and SWC for faster builds and cross-browser compatibility</li>
+        </ul>
+      </div>
+
+      <div class="reveal">
+        <h2>Tech Stack</h2>
+        <div class="project-tech-stack">
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">Socket.io</span>
+          <span class="skill-tag">MongoDB</span>
+          <span class="skill-tag">Vite</span>
+          <span class="skill-tag">Babel.js</span>
+          <span class="skill-tag">SWC</span>
+          <span class="skill-tag">HTML5</span>
+          <span class="skill-tag">CSS</span>
+        </div>
+      </div>
+
+      <div class="project-links reveal">
+        <a href="https://github.com/lukasboz" target="_blank" rel="noopener" class="btn btn-primary">
+          View on GitHub
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+        </a>
+        <a href="../projects.html" class="btn btn-outline">All Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>&copy; 2025 Lukas Bozinov. All rights reserved.</span>
+        <span>Built with care in Markham, ON</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../main.js"></script>
+</body>
+</html>
