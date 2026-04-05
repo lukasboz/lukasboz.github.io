@@ -6,7 +6,7 @@
   <title>Fund Homecare Canada | Lukas Bozinov</title>
   <meta name="description" content="Website for Fund Homecare Canada - a charity providing homecare funding for palliative cancer patients in Ontario.">
   <link rel="stylesheet" href="../styles.css">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>L</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='white'>L</text></svg>">
 </head>
 <body>
 
@@ -17,24 +17,26 @@
         <a href="../index.html">Home</a>
         <a href="../about.html">About</a>
         <a href="../projects.html" class="active">Projects</a>
-        <a href="../contact.html" class="btn btn-primary nav-cta">Let's Talk</a>
+        <a href="../contact.html" class="nav-cta">Let's Talk</a>
       </div>
+      <button class="theme-toggle" aria-label="Toggle theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
   <div class="project-detail-header">
     <div class="container reveal">
-      <a href="../projects.html" style="color: var(--text-muted); font-size: 0.9rem; display: inline-flex; align-items: center; gap: 6px; margin-bottom: 24px;">
+      <a href="../projects.html" class="project-back">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
         Back to Projects
       </a>
       <h1>Fund Homecare Canada</h1>
-      <p class="section-desc">Built and launched the official website for a Canadian charity dedicated to providing homecare funding for palliative cancer patients in Ontario who are in financial need.</p>
+      <p class="section-sub">Built and launched the official website for a Canadian charity dedicated to providing homecare funding for palliative cancer patients in Ontario who are in financial need.</p>
       <div class="project-meta">
         <div class="project-meta-item">
           <span class="project-meta-label">Role</span>
@@ -54,8 +56,8 @@
 
   <section class="project-detail-content">
     <div class="container">
-      <div class="project-hero-image reveal" style="background: linear-gradient(135deg, #2e1a2e, #3e2140);">
-        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      <div class="project-hero-image reveal">
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
       </div>
 
       <div class="reveal">
@@ -84,7 +86,7 @@
           Visit Website
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
         </a>
-        <a href="../projects.html" class="btn btn-outline">All Projects</a>
+        <a href="../projects.html" class="btn btn-ghost">All Projects</a>
       </div>
     </div>
   </section>
