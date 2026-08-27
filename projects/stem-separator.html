@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TensorKernel | Lukas Bozinov</title>
-  <meta name="description" content="A high-performance C++ tensor computation library featuring SIMD vectorization, OpenMP multi-threading, and CUDA GPU acceleration, with seamless Python/PyTorch interoperability via pybind11.">
+  <title>Stem Separator | Lukas Bozinov</title>
+  <meta name="description" content="A local-first AI audio application that separates songs into vocals, drums, bass, and other stems using Demucs.">
   <link rel="stylesheet" href="../styles.css">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='white'>L</text></svg>">
 </head>
@@ -35,20 +35,20 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
         Back to Projects
       </a>
-      <h1>TensorKernel</h1>
-      <p class="section-sub">A high-performance C++ tensor computation library featuring SIMD vectorization, OpenMP multi-threading, and CUDA GPU acceleration, with seamless Python/PyTorch interoperability via pybind11.</p>
+      <h1>Stem Separator</h1>
+      <p class="section-sub">A local-first AI audio application that separates songs into vocals, drums, bass, and other instruments without sending music to a cloud processing service.</p>
       <div class="project-meta">
         <div class="project-meta-item">
           <span class="project-meta-label">Role</span>
-          <span class="project-meta-value">Developer</span>
+          <span class="project-meta-value">Full-Stack & ML Engineer</span>
         </div>
         <div class="project-meta-item">
           <span class="project-meta-label">Type</span>
-          <span class="project-meta-value">Systems Library</span>
+          <span class="project-meta-value">AI Audio Application</span>
         </div>
         <div class="project-meta-item">
           <span class="project-meta-label">Stack</span>
-          <span class="project-meta-value">C++, CUDA, SIMD, OpenMP, Python, PyTorch, pybind11</span>
+          <span class="project-meta-value">Python, Demucs, Next.js, .NET 8</span>
         </div>
       </div>
     </div>
@@ -57,43 +57,56 @@
   <section class="project-detail-content">
     <div class="container">
       <div class="project-hero-image reveal">
-        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3"/></svg>
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"><path d="M3 12h2l2-5 3 10 4-14 3 12 2-3h2"/></svg>
       </div>
 
       <div class="reveal">
         <h2>Overview</h2>
-        <p>TensorKernel is a from-scratch tensor computation library built in C++ for maximum performance. It leverages SIMD intrinsics for vectorized CPU operations, OpenMP for multi-threaded parallelism, and CUDA kernels for GPU acceleration -- providing a flexible backend for numerical computing.</p>
+        <p>Stem Separator turns a mixed audio track into four independent WAV stems: vocals, drums, bass, and other instruments. It uses the Demucs htdemucs model locally, keeping source audio and generated files on the user's computer while still providing a polished workflow for processing, playback, and export.</p>
+      </div>
+
+      <div class="reveal">
+        <h2>System Design</h2>
+        <p>A shared FastAPI backend handles audio validation, FFmpeg decoding, PyTorch inference, output generation, and cleanup. The model is loaded once and reused across requests, while an inference lock prevents competing jobs from exhausting CPU or GPU memory. Hardware selection automatically prefers CUDA, then Apple MPS, before falling back to CPU.</p>
+        <p>Two clients use the same local API. The Next.js browser client streams progress through Server-Sent Events and uses the Web Audio API for synchronized playback and custom mix export. The native .NET 8 WPF client automatically manages the packaged backend and adds drag-and-drop, per-stem controls, keyboard transport, individual exports, and karaoke mixes.</p>
       </div>
 
       <div class="reveal">
         <h2>Key Features</h2>
         <ul>
-          <li>SIMD-optimized tensor operations for fast CPU computation</li>
-          <li>OpenMP multi-threading for parallel workloads</li>
-          <li>CUDA kernel integration for GPU-accelerated computation</li>
-          <li>Python bindings via pybind11 for seamless PyTorch interop</li>
-          <li>Custom memory management optimized for tensor operations</li>
-          <li>Benchmarked against standard libraries for performance validation</li>
+          <li>Four-stem AI separation for vocals, drums, bass, and other instruments</li>
+          <li>Private, local-only processing with automatic temporary-file cleanup</li>
+          <li>CUDA, Apple MPS, and CPU execution selected from available hardware</li>
+          <li>Live processing status, percentage updates, preview mode, and cancellation</li>
+          <li>Synchronized multistem playback with seeking and per-stem mute controls</li>
+          <li>Individual WAV downloads and browser-side custom mix export</li>
+          <li>Next.js browser interface and self-contained Windows x64 application</li>
         </ul>
       </div>
 
       <div class="reveal">
         <h2>Tech Stack</h2>
         <div class="project-tech-stack">
-          <span class="skill-tag">C++</span>
-          <span class="skill-tag">CUDA</span>
-          <span class="skill-tag">SIMD</span>
-          <span class="skill-tag">OpenMP</span>
           <span class="skill-tag">Python</span>
+          <span class="skill-tag">FastAPI</span>
           <span class="skill-tag">PyTorch</span>
-          <span class="skill-tag">pybind11</span>
+          <span class="skill-tag">Demucs</span>
+          <span class="skill-tag">FFmpeg</span>
+          <span class="skill-tag">Next.js</span>
+          <span class="skill-tag">TypeScript</span>
+          <span class="skill-tag">Web Audio API</span>
+          <span class="skill-tag">Server-Sent Events</span>
+          <span class="skill-tag">.NET 8</span>
+          <span class="skill-tag">WPF</span>
+          <span class="skill-tag">NAudio</span>
+          <span class="skill-tag">PyInstaller</span>
         </div>
       </div>
 
       <div class="project-links reveal">
-        <a href="https://github.com/lukasboz" target="_blank" rel="noopener" class="btn btn-primary">
+        <a href="https://github.com/lukasboz/Track-Isolator" target="_blank" rel="noopener" class="btn btn-primary">
           View on GitHub
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1 2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
         </a>
         <a href="../projects.html" class="btn btn-ghost">All Projects</a>
       </div>
