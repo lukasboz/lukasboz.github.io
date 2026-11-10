@@ -2,7 +2,7 @@ export const profile = {
   name: 'Lukas Bozinov',
   email: 'lukasbozinov@gmail.com',
   github: 'https://github.com/lukasboz',
-  linkedin: 'https://www.linkedin.com/in/lukas-bozinov-b52479244/',
+  linkedin: 'https://www.linkedin.com/in/lukasbozinov/',
   location: 'Markham, Ontario, Canada',
 };
 
@@ -54,7 +54,7 @@ export const projects = [
     category: 'Tools', categoryId: 'tools', role: 'Developer', type: 'File conversion utility',
     tagline: 'New format. Same simplicity.',
     summary: 'A focused file conversion utility with drag-and-drop, batch processing, and clear progress feedback. Less friction between file formats.',
-    stack: ['File conversion', 'Batch processing'], tools: ['File conversion', 'Batch processing', 'Drag-and-drop'],
+    stack: ['Rust', 'File conversion', 'Batch processing'], tools: ['Rust', 'File conversion', 'Batch processing', 'Drag-and-drop'],
     sections: [['The idea', 'EasyConvert simplifies file format conversion with a clean interface. Users can drag and drop files and convert them between formats without working through a complicated workflow.'], ['A focused workflow', 'Batch conversion makes it possible to process multiple files at once. Progress feedback keeps the state of each conversion clear, with an emphasis on fast processing and ease of use.']],
     features: ['Support for multiple file format conversions', 'Drag-and-drop workflow', 'Batch conversion', 'Clear processing progress'],
   },
@@ -84,7 +84,7 @@ export const projects = [
 ];
 
 export const experience = [
-  { company: 'AMD', letter: 'A', color: 'red', date: 'Jan 2026 — Present', role: 'Computer Vision, ML & NPU Driver Validation Engineer · Intern', description: 'Building agentic AI development pipelines, engineering CI infrastructure for driver testing, and helping maintain 99% uptime across 300+ workstations.', location: 'Markham, ON' },
-  { company: 'J.D. Power', letter: 'J', color: 'blue', date: 'May 2025 — Dec 2025', role: 'QA Automation Engineer · Intern', description: 'Built automation frameworks with Playwright and TypeScript, integrated GitLab and Xray pipelines, and improved test reporting by 30% with Allure.', location: 'London, ON · Remote' },
-  { company: 'Western University', letter: 'W', color: 'purple', date: '2022 — Apr 2027 (expected)', role: 'B.S. Computer Science · Honours Specialization', description: "3.8 GPA and two years on the Dean’s Honours List. Studying algorithms, data structures, systems programming, and machine learning.", location: 'London, ON' },
+  { company: 'AMD', letter: 'A', color: 'red', date: 'Jan 2026 — Aug 2026', role: 'Associate Software Engineer · Agentic AI & ML SWE Intern', description: 'Built agentic AI tools, NPU development agent swarms, and a KNN bug detector. Improved NPU testing efficiency by 40% and maintained 99% uptime across 300+ CI and CVML workstations.', location: 'Markham, ON' },
+  { company: 'J.D. Power', letter: 'J', color: 'blue', date: 'May 2025 — Dec 2025', role: 'DevOps and MLOps Engineer Intern', description: 'Built Playwright test suites with GitLab CI/CD and Xray, reducing manual testing by 35%. Implemented Allure reporting and logging to improve defect traceability by 30%.', location: 'London, ON · Remote' },
+  { company: 'Western University', letter: 'W', color: 'purple', date: 'Graduating April 2027', role: 'B.S. in Computer Science', description: '3.8 GPA. Building experience across systems programming, machine learning, and software engineering.', location: 'London, ON' },
 ];

@@ -31,9 +31,11 @@ For another static host, run `npm run build` and upload the contents of `dist/`.
 ## Edit content
 
 - `scripts/content.mjs`: personal details, projects, experience, technology lists, and search content.
+- `scripts/resume.mjs`: resume details transcribed from the supplied PDF.
 - `scripts/build.mjs`: page templates and shared navigation, footer, and interface concepts.
 - `styles.css`: layout, responsive rules, project visuals, and resume print styles.
 - `main.js`: search, keyboard shortcuts, project filters, quick links, clipboard, and email draft behavior.
+- `theme.js`: early theme initialization, system preference, and persistent light/dark selection.
 - `assets/landscape.png`: the locally stored reference landscape.
 
 Run `npm run build` after editing. Commit the generated HTML and search index together with their sources.
@@ -42,4 +44,6 @@ Type directly into the search field. **Ctrl/⌘ K** or **/** focuses it. Suggest
 
 About links open the profile card over the current page, following the supplied `.source/image.png` reference. Skills, Experience, and Fun facts are keyboard-accessible tabs. `about.html` also works as a standalone page. TETR.IO RL is listed from [its repository](https://github.com/lukasboz/TETR.IO-RL), with a dedicated project page and search entry.
 
-The contact form opens a prefilled draft in the visitor’s email app; it does not submit to a server. Direct email, LinkedIn, and GitHub links are also available. The resume page includes **Print / save PDF** and a dedicated print layout, replacing the previous missing PDF link. Existing biographical and project details were carried over from the original site.
+The contact form opens a prefilled draft in the visitor’s email app; it does not submit to a server. Direct email, LinkedIn, and GitHub links are also available. The resume page follows the supplied `.source/lukas-resume.pdf`, includes **Download PDF** for the original document, and retains **Print / save PDF** for the web version. The distributable PDF is stored in `assets/lukas-resume.pdf`; builds do not require `.source/`.
+
+Dark mode initially follows the visitor’s system preference. The sun/moon button in the header or About card saves an explicit choice across pages and reloads, and syncs it across tabs. Light mode uses the original landscape; dark mode uses `assets/Golden Sunset Over Rolling Hills.png`. Print styles remain light in both themes.

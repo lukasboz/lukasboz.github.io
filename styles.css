@@ -309,3 +309,219 @@
   .about-tab-panel .experience-item p{font-size:12px}
 }
 @media print{.about-dialog,.search-suggestions{display:none!important}}
+
+/* Resume content follows the supplied document, with comfortable screen spacing. */
+:root{--canvas:#fff;--panel:#fff;color-scheme:light}
+.inner-page{background:var(--canvas)}
+.theme-toggle{flex-shrink:0;width:34px;height:34px}
+.theme-toggle .icon{width:19px;height:19px}
+.theme-icon-sun{display:none}
+.about-theme-toggle{position:absolute;top:18px;right:62px;background:#ffffffb8;color:#718099}
+.about-theme-toggle:hover{background:white}
+.resume-toolbar-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.resume-skill-details{margin:0;display:flex;flex-direction:column;gap:12px;font-size:12px;line-height:1.85}
+.resume-skill-details>div{display:grid;grid-template-columns:100px minmax(0,1fr);gap:15px}
+.resume-skill-details dt{font-weight:500;color:#4e5c6d}
+.resume-skill-details dd{margin:0;color:#758193}
+.resume-entry-header{display:flex;justify-content:space-between;align-items:baseline;gap:15px}
+.resume-entry-header h3{font-size:16px;font-weight:500;letter-spacing:-.25px;line-height:1.5}
+.resume-entry-header>span{font-size:11px;color:#8592a4;flex-shrink:0}
+.resume-education-details{display:flex;justify-content:space-between;align-items:baseline;gap:15px;margin-top:5px;font-size:12px;color:#8592a4}
+.resume-education-details p{font-size:13px;color:#6a788b}
+.resume-education-details strong{font-weight:500}
+.resume-employer{margin-top:23px}
+.resume-experience>.resume-employer:first-of-type{margin-top:0}
+.resume-role-list{display:flex;flex-direction:column;gap:6px;margin-top:7px}
+.resume-role-list>div{display:flex;justify-content:space-between;align-items:baseline;gap:14px}
+.resume-role-list h4{font-size:12px;line-height:1.6;color:#6d7b8d;font-weight:400}
+.resume-role-list span{font-size:10px;color:#8996a6;flex-shrink:0}
+.resume-bullets{padding-left:17px;margin:14px 0 0;display:flex;flex-direction:column;gap:10px}
+.resume-bullets li,.resume-project-details li{font-size:12px;line-height:1.85;color:#788495}
+.resume-bullets li::marker,.resume-project-details li::marker{color:#a7b5c8}
+.resume-bullets strong,.resume-project-details strong{font-weight:500;color:#4e6074}
+.resume-project-details{padding-left:17px;margin:0;display:flex;flex-direction:column;gap:11px}
+.resume-project-details a{color:var(--link)}
+.resume-project-details a:hover{text-decoration:underline;text-underline-offset:3px}
+.resume-project-details .icon{width:11px;height:11px;margin-left:2px}
+@media(max-width:700px){
+  .resume-toolbar{align-items:flex-start;gap:15px}
+  .resume-toolbar-actions{gap:7px}
+  .resume-toolbar-actions .button{font-size:9px;padding:8px 11px}
+  .resume-skill-details>div{grid-template-columns:1fr;gap:2px}
+  .resume-skill-details{font-size:12px}
+  .resume-entry-header{align-items:start;flex-wrap:wrap;gap:4px}
+  .resume-entry-header h3{font-size:15px}
+  .resume-entry-header>span{font-size:10px}
+  .resume-education-details{display:block}
+  .resume-education-details>span{display:block;margin-top:3px;font-size:10px}
+  .resume-role-list>div{display:block}
+  .resume-role-list h4{font-size:12px}
+  .resume-role-list span{font-size:10px;display:block;margin-top:2px}
+  .resume-bullets li,.resume-project-details li{font-size:12px}
+}
+@media(max-width:440px){
+  .utility-nav{gap:13px}
+  .home-topbar .utility-nav{gap:15px}
+  .work-page .page-topbar>.utility-nav{gap:13px}
+  .resume-toolbar{display:block}
+  .resume-toolbar .page-breadcrumb{margin:0 0 17px}
+  .resume-toolbar-actions{justify-content:flex-start}
+  .resume-toolbar-actions .button{font-size:10px;padding:8px 12px}
+}
+
+/* Keep dark presentation out of the printed resume. */
+@media screen{
+  :root[data-theme="dark"]{color-scheme:dark;--canvas:#14181f;--panel:#1c222c;--ink:#e8edf5;--muted:#b2bdcd;--line:#354050;--surface:#242c38;--blue:#8ab4f8;--link:#a1c5ff;--red:#f28b82;--green:#81c995;--yellow:#f5ca76;--purple:#c4a2fa;--orange:#efbd77;--pink:#e9a1c4}
+  :root[data-theme="dark"] .theme-icon-moon{display:none}
+  :root[data-theme="dark"] .theme-icon-sun{display:block}
+  :root[data-theme="dark"] .home-page{background-color:#202331;background-image:url('assets/Golden Sunset Over Rolling Hills.png')}
+  :root[data-theme="dark"] .home-page:before{background:linear-gradient(180deg,#1013210d,transparent 50%,#1013212e)}
+  :root[data-theme="dark"] .bookmark-bar{background:#1c232d;border-color:#354050}
+  :root[data-theme="dark"] .bookmark{color:#c0cbd9}
+  :root[data-theme="dark"] .bookmark:hover,:root[data-theme="dark"] .bookmark.is-current{background:#2e3949}
+  :root[data-theme="dark"] .bookmark-caption{color:#8f9caf}
+  :root[data-theme="dark"] .bookmark-icon.blue{background:#477ac9;color:white}
+  :root[data-theme="dark"] .bookmark-icon.red{background:#cf655c;color:white}
+  :root[data-theme="dark"] .bookmark-icon.purple{background:#9671dc;color:white}
+  :root[data-theme="dark"] .bookmark-icon.green{background:#4e9969;color:white}
+  :root[data-theme="dark"] .icon-button:hover{background:#afc4e21c}
+  :root[data-theme="dark"] .avatar{background:#304f3d;color:#d6edda;box-shadow:0 0 0 2px #ffffff19}
+  :root[data-theme="dark"] .skip-link{background:#242d3b;color:#e8edf5}
+  :root[data-theme="dark"] .app-launcher{background:#1c2430;border-color:#3a4658;box-shadow:0 12px 40px #0005}
+  :root[data-theme="dark"] .app-launcher a:hover{background:#2b3749}
+  :root[data-theme="dark"] .search-bar-field,:root[data-theme="dark"] .search-bar--home .search-bar-field{background:#202834;border-color:#4a5668;box-shadow:0 2px 8px #0003}
+  :root[data-theme="dark"] .search-bar-field>.icon{color:#afbdcf}
+  :root[data-theme="dark"] .search-bar input{color:#edf2f9}
+  :root[data-theme="dark"] .search-bar input::placeholder{color:#acb8c8}
+  :root[data-theme="dark"] kbd{background:#2b3543;border-color:#455265;color:#a9b7cb}
+  :root[data-theme="dark"] .search-clear{color:#b4c1d2}
+  :root[data-theme="dark"] .search-suggestions{background:#1d2531;color:#edf2fa;border-color:#3b485a;box-shadow:0 8px 28px #0005}
+  :root[data-theme="dark"] .search-result.is-selected,:root[data-theme="dark"] .search-result:hover{background:#2d3d55}
+  :root[data-theme="dark"] .search-result small{color:#aab9cb}
+  :root[data-theme="dark"] .inline-search-status{border-color:#344253;color:#a6b5c8}
+  :root[data-theme="dark"] .action-chip{background:#1c2531f7;color:#edf2f9;border-color:#3e4b5e;box-shadow:0 2px 7px #0003}
+  :root[data-theme="dark"] .action-chip small{color:#b1bfd1}
+  :root[data-theme="dark"] .chip-arrow{color:#b1bfd1}
+  :root[data-theme="dark"] .blue{background:#233d60;color:#a2c7ff}
+  :root[data-theme="dark"] .red{background:#4f3034;color:#f4a19a}
+  :root[data-theme="dark"] .purple{background:#3c2f57;color:#cfb0ff}
+  :root[data-theme="dark"] .green{background:#254337;color:#a0dbb2}
+  :root[data-theme="dark"] .orange{background:#4d3d29;color:#f3cc8d}
+  :root[data-theme="dark"] .pink{background:#4a2f44;color:#edb1d1}
+  :root[data-theme="dark"] .neutral{background:#323c4a;color:#c0ccdb}
+  :root[data-theme="dark"] .home-current{background:#151a24a8;color:#f0f3f8}
+  :root[data-theme="dark"] .shortcut .project-symbol{border-color:#dce4f0;box-shadow:0 3px 8px #0004}
+  :root[data-theme="dark"] .overview-card,:root[data-theme="dark"] .profile-panel,:root[data-theme="dark"] .contact-form-card,:root[data-theme="dark"] .resume-sheet{background:var(--panel);border-color:var(--line)}
+  :root[data-theme="dark"] .card-label,:root[data-theme="dark"] .work-shell .overview-card .card-label{color:#dce5f2}
+  :root[data-theme="dark"] .overview-card>p,:root[data-theme="dark"] .work-shell .overview-card>p{color:#b4c1d2}
+  :root[data-theme="dark"] .overview-card p strong,:root[data-theme="dark"] .work-shell .overview-card p strong{color:#e7edf6}
+  :root[data-theme="dark"] .overview-stats>span{color:#b0bfd2}
+  :root[data-theme="dark"] .section-tabs{border-color:#354050}
+  :root[data-theme="dark"] .filter-tab{color:#b6c2d3}
+  :root[data-theme="dark"] .filter-tab.is-active{color:#a1c5ff;border-bottom-color:#8ab4f8}
+  :root[data-theme="dark"] .filter-tab:hover{background:#243247;color:#c5dbff}
+  :root[data-theme="dark"] .result-source strong,:root[data-theme="dark"] .work-shell .result-source strong{color:#c7d2e1}
+  :root[data-theme="dark"] .result-source small,:root[data-theme="dark"] .work-shell .result-source small{color:#8ccfa8}
+  :root[data-theme="dark"] .project-result h2,:root[data-theme="dark"] .work-shell .project-result h2{color:#a1c5ff}
+  :root[data-theme="dark"] .project-result p,:root[data-theme="dark"] .work-shell .project-result p{color:#b5c2d3}
+  :root[data-theme="dark"] .tag{background:#2b3543;color:#becadd}
+  :root[data-theme="dark"] .tag.blue{background:#233d60;color:#a2c7ff}
+  :root[data-theme="dark"] .tag.green{background:#254337;color:#a0dbb2}
+  :root[data-theme="dark"] .tag.purple{background:#3c2f57;color:#cfb0ff}
+  :root[data-theme="dark"] .tag.orange{background:#4d3d29;color:#f3cc8d}
+  :root[data-theme="dark"] .tag.red{background:#4f3034;color:#f4a19a}
+  :root[data-theme="dark"] .tag.pink{background:#4a2f44;color:#edb1d1}
+  :root[data-theme="dark"] .profile-cover{background:linear-gradient(180deg,#3d69af,#2d4368 58%,#202a39)}
+  :root[data-theme="dark"] .profile-heading p,:root[data-theme="dark"] .work-shell .profile-heading p{color:#b0bed0}
+  :root[data-theme="dark"] .profile-facts dt,:root[data-theme="dark"] .work-shell .profile-facts dt{color:#a5b3c6}
+  :root[data-theme="dark"] .profile-facts dd,:root[data-theme="dark"] .work-shell .profile-facts dd{color:#c5d1e1}
+  :root[data-theme="dark"] .profile-more h3,:root[data-theme="dark"] .work-shell .profile-more h3{color:#a7b6ca}
+  :root[data-theme="dark"] .profile-more>a,:root[data-theme="dark"] .work-shell .profile-more>a{color:#a1c5ff}
+  :root[data-theme="dark"] .button--blue{background:#8ab4f8;color:#112841}
+  :root[data-theme="dark"] .button--blue:hover{background:#aacbff}
+  :root[data-theme="dark"] .button--outline{background:#232d3b;color:#b1cfff;border-color:#4b5a70}
+  :root[data-theme="dark"] .button--outline:hover{background:#2c3b50;border-color:#6888b5}
+  :root[data-theme="dark"] .site-footer{color:#a1aec1;border-color:#344050}
+  :root[data-theme="dark"] .site-footer--home{color:#edf1f7}
+  :root[data-theme="dark"] .page-breadcrumb{color:#a3b1c4}
+  :root[data-theme="dark"] .page-breadcrumb a{color:#b9c8dc}
+  :root[data-theme="dark"] .page-breadcrumb>span{color:#7d8da4}
+  :root[data-theme="dark"] .eyebrow{color:#9aacc5}
+  :root[data-theme="dark"] .about-card,:root[data-theme="dark"] .about-dialog{background:#1c232e;color:#e8edf5}
+  :root[data-theme="dark"] .about-cover{background:linear-gradient(180deg,#394b72,#2d384f 68%,#222b3a)}
+  :root[data-theme="dark"] .about-avatar{background:linear-gradient(145deg,#4b9a70,#357752);border-color:#3b4b47}
+  :root[data-theme="dark"] .about-close,:root[data-theme="dark"] .about-theme-toggle{background:#242e40cf;color:#c5d4e8}
+  :root[data-theme="dark"] .about-close:hover,:root[data-theme="dark"] .about-theme-toggle:hover{background:#34455e}
+  :root[data-theme="dark"] .about-identity p{color:#b2bfd1}
+  :root[data-theme="dark"] .about-availability{background:#233d31;color:#a1d8b1}
+  :root[data-theme="dark"] .about-description{color:#c3cddd}
+  :root[data-theme="dark"] .about-chips>span{background:#242d3a;border-color:#435066;color:#c1cdde}
+  :root[data-theme="dark"] .about-chips>span:nth-child(3) .icon{color:#c1cdde}
+  :root[data-theme="dark"] .about-tabs{border-color:#3a4659}
+  :root[data-theme="dark"] .about-tabs>button{color:#b5c3d7}
+  :root[data-theme="dark"] .about-tabs>button[aria-selected=true]{color:#abcaff;border-bottom-color:#8ab4f8}
+  :root[data-theme="dark"] .about-tabs>button:hover{background:#29364a}
+  :root[data-theme="dark"] .about-skill-row h4{color:#e2eaf6}
+  :root[data-theme="dark"] .about-skill-row p{color:#aebbce}
+  :root[data-theme="dark"] .about-facts p{color:#b6c4d7}
+  :root[data-theme="dark"] .about-facts strong{color:#e3ebf7}
+  :root[data-theme="dark"] .about-socials>a{color:#bed0e8;border-color:#45546b}
+  :root[data-theme="dark"] .about-socials>a:hover{background:#2a3b55;color:#c6dbff}
+  :root[data-theme="dark"] .about-actions .button--blue{background:#8ab4f8;color:#112841}
+  :root[data-theme="dark"] .experience-company>span,:root[data-theme="dark"] .experience-item small{color:#a4b4cb}
+  :root[data-theme="dark"] .experience-item h4{color:#b9c8de}
+  :root[data-theme="dark"] .contact-heading h1>span{color:#a4b3c8}
+  :root[data-theme="dark"] .email-card small,:root[data-theme="dark"] .copy-email{color:#9eafc7}
+  :root[data-theme="dark"] .contact-socials small,:root[data-theme="dark"] .contact-location>span{color:#9eafc7}
+  :root[data-theme="dark"] .form-field label{color:#b3c1d5}
+  :root[data-theme="dark"] .form-field input,:root[data-theme="dark"] .form-field select,:root[data-theme="dark"] .form-field textarea{background:#161e29;color:#e1eaf7;border-color:#42516a}
+  :root[data-theme="dark"] .form-field input::placeholder,:root[data-theme="dark"] .form-field textarea::placeholder{color:#9dacc1}
+  :root[data-theme="dark"] .form-note{color:#a2b2c9}
+  :root[data-theme="dark"] .resume-contact,:root[data-theme="dark"] .resume-contact a{color:#b1cfff}
+  :root[data-theme="dark"] .resume-section>h2{color:#adbed7}
+  :root[data-theme="dark"] .resume-skill-details dt,:root[data-theme="dark"] .resume-bullets strong,:root[data-theme="dark"] .resume-project-details strong{color:#d9e4f4}
+  :root[data-theme="dark"] .resume-skill-details dd,:root[data-theme="dark"] .resume-bullets li,:root[data-theme="dark"] .resume-project-details li{color:#b7c5d9}
+  :root[data-theme="dark"] .resume-role-list h4,:root[data-theme="dark"] .resume-education-details p{color:#c3cfe1}
+  :root[data-theme="dark"] .resume-role-list span,:root[data-theme="dark"] .resume-entry-header>span,:root[data-theme="dark"] .resume-education-details>span{color:#a0b0c8}
+  :root[data-theme="dark"] .gallery-card-info p,:root[data-theme="dark"] .concept-caption{color:#acbbd0}
+  :root[data-theme="dark"] .gallery-arrow{border-color:#465773;color:#b4cff4;background:#202b3b}
+  :root[data-theme="dark"] .preview-blue{background:#222e49}
+  :root[data-theme="dark"] .preview-green{background:#24392f}
+  :root[data-theme="dark"] .preview-purple{background:#322943}
+  :root[data-theme="dark"] .preview-orange{background:#443821}
+  :root[data-theme="dark"] .preview-red{background:#442e2b}
+  :root[data-theme="dark"] .preview-pink{background:#3f2d3b}
+  :root[data-theme="dark"] .project-tagline{color:#adbed5}
+  :root[data-theme="dark"] .project-meta span,:root[data-theme="dark"] .project-figure figcaption{color:#a2b4ce}
+  :root[data-theme="dark"] .project-meta strong,:root[data-theme="dark"] .feature-list>li{color:#bdcbdf}
+  :root[data-theme="dark"] .project-header-label,:root[data-theme="dark"] .project-sidebar,:root[data-theme="dark"] .project-sidebar h2{color:#a3b4cf}
+  :root[data-theme="dark"] .article-section-number{color:#9aabc5}
+  :root[data-theme="dark"] .toast{background:#34465f;color:#eff5ff}
+  :root[data-theme="dark"] ::selection{background:#3b5680;color:#f4f8ff}
+}
+@media print{
+  :root{color-scheme:light}
+  .theme-toggle{display:none!important}
+  .resume-heading{padding-bottom:10px}
+  .resume-heading h1{font-size:28px;margin:5px 0 8px}
+  .resume-section{margin-top:15px;break-inside:auto}
+  .resume-section>h2{font-size:9px;margin-bottom:10px;color:#4c607b}
+  .resume-skill-details{font-size:9px;line-height:1.55;gap:5px}
+  .resume-skill-details>div{grid-template-columns:72px 1fr;gap:10px}
+  .resume-entry-header{display:flex;flex-wrap:nowrap;align-items:baseline;gap:10px}
+  .resume-entry-header h3{font-size:11px}
+  .resume-entry-header>span{font-size:8px}
+  .resume-education-details{display:flex;font-size:9px;margin-top:3px}
+  .resume-education-details p{font-size:9px}
+  .resume-education-details>span{font-size:8px}
+  .resume-employer{margin-top:14px;break-inside:avoid}
+  .resume-role-list{gap:3px;margin-top:4px}
+  .resume-role-list>div{display:flex;gap:10px}
+  .resume-role-list h4{font-size:9px}
+  .resume-role-list span{font-size:8px;margin-top:0}
+  .resume-bullets{gap:5px;margin-top:8px;padding-left:13px}
+  .resume-bullets li,.resume-project-details li{font-size:9.5px;line-height:1.55;color:#4e5d70}
+  .resume-bullets strong,.resume-project-details strong{color:#22334b}
+  .resume-project-details{gap:6px;padding-left:13px}
+  .resume-project-details .icon{display:none}
+}

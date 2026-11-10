@@ -19,7 +19,7 @@ for (const file of files) {
   assert.match(html, /<title>[^<]+Lukas Bozinov<\/title>/, `${file}: missing page title`);
   assert.equal(html, readFileSync(resolve(root, file), 'utf8'), `${file}: root and deploy output differ`);
   for (const [, target] of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
-    if (/^(?:https?:|mailto:|data:)/.test(target)) continue;
+    if (/^(?:https?:|mailto:|tel:|data:)/.test(target)) continue;
     assert.notEqual(target, '#', `${file}: placeholder link`);
     const [pathname, fragment] = target.split('#');
     const local = pathname.startsWith('/') ? resolve(dist, '.' + pathname) : pathname ? resolve(dirname(path), pathname) : path;
