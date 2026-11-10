@@ -1,0 +1,77 @@
+export const profile = {
+  name: 'Lukas Bozinov',
+  email: 'lukasbozinov@gmail.com',
+  github: 'https://github.com/lukasboz',
+  linkedin: 'https://www.linkedin.com/in/lukas-bozinov-b52479244/',
+  devpost: 'https://devpost.com/lukasboz',
+  location: 'Markham, Ontario, Canada',
+};
+
+export const projects = [
+  {
+    slug: 'stem-separator', name: 'Stem Separator', short: 'Stem', icon: 'wave', color: 'blue',
+    category: 'AI & ML', categoryId: 'ai', role: 'Full-Stack & ML Engineer', type: 'AI audio application',
+    tagline: 'One track. Every layer.',
+    summary: 'Local-first AI audio separation. Turn a song into vocals, drums, bass, and instrument stems with a shared backend for the web and Windows.',
+    stack: ['Python', 'Demucs', 'FastAPI', 'PyTorch', 'Next.js', '.NET 8'],
+    tools: ['Python', 'FastAPI', 'PyTorch', 'Demucs', 'FFmpeg', 'Next.js', 'TypeScript', 'Web Audio API', 'Server-Sent Events', '.NET 8', 'WPF', 'NAudio', 'PyInstaller'],
+    github: 'https://github.com/lukasboz/Track-Isolator',
+    sections: [
+      ['The idea', "A great recording contains more than one thing worth listening to. Stem Separator turns a mixed audio track into four independent WAV stems: vocals, drums, bass, and other instruments. The Demucs htdemucs model runs locally, keeping source audio and generated files on the user's computer."],
+      ['One backend, two experiences', 'A shared FastAPI backend handles audio validation, FFmpeg decoding, PyTorch inference, output generation, and cleanup. The model loads once and is reused across requests. An inference lock prevents competing jobs from exhausting memory, and hardware selection prefers CUDA, then Apple MPS, then CPU.', 'The Next.js browser client streams progress through Server-Sent Events and uses the Web Audio API for synchronized playback and custom mix export. A native .NET 8 WPF client manages the packaged backend and adds drag-and-drop, per-stem controls, keyboard transport, and karaoke mixes.'],
+    ],
+    features: ['Four independent audio stems, exported as WAV files', 'Private, local processing with temporary-file cleanup', 'Automatic CUDA, Apple MPS, and CPU selection', 'Live progress, preview mode, and cancellation', 'Synchronized playback, seeking, and per-stem mute controls', 'Browser-based custom mixes and a self-contained Windows application'],
+  },
+  {
+    slug: 'chef-ai', name: 'Chef.ai', short: 'Chef.ai', icon: 'chef', color: 'green',
+    category: 'AI & ML', categoryId: 'ai', role: 'Developer', type: 'Machine learning application',
+    tagline: 'Less waste. More possibility.',
+    summary: 'Smarter meals from the groceries you already have. Machine learning connects expiry dates, consumption patterns, and meal recommendations.',
+    stack: ['Python', 'Scikit-learn', 'Pandas', 'NumPy'],
+    tools: ['Python', 'Scikit-learn', 'Pandas', 'NumPy'],
+    sections: [['The idea', 'Chef.ai tackles food waste through intelligent meal planning. The app analyzes grocery purchases, tracks expiry dates, and recommends meals that prioritize ingredients closest to expiration.'], ['Making the data useful', 'Regression and classification models identify consumption patterns and help optimize grocery purchases. Historical analysis and visualization make it easier to understand what gets used, what gets wasted, and what to buy next. The original project measured a 20% reduction in food waste across test users.']],
+    features: ['Meal recommendations based on ingredient expiry dates', 'Regression and classification for consumption prediction', 'Grocery purchase optimization', 'Historical consumption analysis', 'Visual dashboards for tracking food waste'],
+  },
+  {
+    slug: 'facial-recognition', name: 'Facial Recognition', short: 'Vision', icon: 'scan', color: 'purple',
+    category: 'Computer vision', categoryId: 'vision', role: 'Developer', type: 'Computer vision application',
+    tagline: 'Recognition. In real time.',
+    summary: 'A real-time security system built with C++ and OpenCV. Multi-face recognition, role-based access, and a live monitoring interface.',
+    stack: ['C++', 'OpenCV', 'Qt5'], tools: ['C++', 'OpenCV', 'Qt5'],
+    sections: [['The idea', 'This security system identifies and authenticates individuals through real-time facial recognition. Built with C++ and OpenCV for performance, it brings detection, access management, and monitoring into one desktop application.'], ['From detection to decisions', 'A Qt5 interface provides live monitoring and configuration. Multi-face detection supports simultaneous identification, while role-based access control handles different clearance levels. Automated alerts flag unrecognized faces and unauthorized access attempts.']],
+    features: ['Real-time facial detection and recognition', 'Simultaneous identification of multiple faces', 'Configurable role-based access permissions', 'Automated alerts for unauthorized access', 'Qt5 interface for monitoring and configuration', 'C++ implementation focused on low-latency processing'],
+  },
+  {
+    slug: 'math-challenge', name: 'Math Challenge', short: 'Math', icon: 'math', color: 'orange',
+    category: 'Web', categoryId: 'web', role: 'Full-Stack Developer', type: 'Multiplayer web application',
+    tagline: 'Think fast. Play together.',
+    summary: 'A real-time multiplayer math platform with live challenges, synchronized game sessions, persistent profiles, and competitive leaderboards.',
+    stack: ['React', 'Node.js', 'Socket.io', 'MongoDB'], tools: ['React', 'Node.js', 'Socket.io', 'MongoDB', 'Vite', 'Babel.js', 'SWC'],
+    sections: [['The idea', 'An educational multiplayer platform that turns timed math challenges into shared, competitive experiences. Players join game sessions, compete in real time, and track their performance over time.'], ['Built for live interaction', 'React provides a responsive frontend, while Socket.io keeps players synchronized without page refreshes. A Node.js backend manages game logic, user sessions, and API endpoints. MongoDB stores profiles, game history, and leaderboard data.']],
+    features: ['Real-time multiplayer challenges with Socket.io', 'Responsive React interface', 'Persistent profiles and game history', 'Competitive scoring and leaderboards', 'A development pipeline using Vite, Babel.js, and SWC'],
+  },
+  {
+    slug: 'easyconvert', name: 'EasyConvert', short: 'Convert', icon: 'convert', color: 'red',
+    category: 'Tools', categoryId: 'tools', role: 'Developer', type: 'File conversion utility',
+    tagline: 'New format. Same simplicity.',
+    summary: 'A focused file conversion utility with drag-and-drop, batch processing, and clear progress feedback. Less friction between file formats.',
+    stack: ['File conversion', 'Batch processing'], tools: ['File conversion', 'Batch processing', 'Drag-and-drop'],
+    sections: [['The idea', 'EasyConvert simplifies file format conversion with a clean interface. Users can drag and drop files and convert them between formats without working through a complicated workflow.'], ['A focused workflow', 'Batch conversion makes it possible to process multiple files at once. Progress feedback keeps the state of each conversion clear, with an emphasis on fast processing and ease of use.']],
+    features: ['Support for multiple file format conversions', 'Drag-and-drop workflow', 'Batch conversion', 'Clear processing progress'],
+  },
+  {
+    slug: 'ytmp3', name: 'YTMP3', short: 'YTMP3', icon: 'music', color: 'pink',
+    category: 'Tools', categoryId: 'tools', role: 'Developer', type: 'Desktop application',
+    tagline: 'Your audio. Ready to go.',
+    summary: 'A Python desktop application for converting YouTube videos to MP3, with URL validation, live progress, and a CustomTkinter interface.',
+    stack: ['Python', 'CustomTkinter', 'Pytubefix'], tools: ['Python', 'CustomTkinter', 'Pytubefix'],
+    sections: [['The idea', 'YTMP3 provides a clean desktop interface for converting YouTube videos to MP3 audio files. Built with Python and CustomTkinter, it focuses on a straightforward workflow and reliable feedback.'], ['Reliability in the details', 'URL validation checks links before processing. Pytubefix handles stream extraction, while real-time progress and error handling keep users informed when downloads encounter network issues or invalid links.']],
+    features: ['CustomTkinter desktop interface', 'YouTube URL validation', 'Real-time download progress', 'Error handling for invalid URLs and network issues', 'Pytubefix stream extraction'],
+  },
+];
+
+export const experience = [
+  { company: 'AMD', letter: 'A', color: 'red', date: 'Jan 2026 — Present', role: 'Computer Vision, ML & NPU Driver Validation Engineer · Intern', description: 'Building agentic AI development pipelines, engineering CI infrastructure for driver testing, and helping maintain 99% uptime across 300+ workstations.', location: 'Markham, ON' },
+  { company: 'J.D. Power', letter: 'J', color: 'blue', date: 'May 2025 — Dec 2025', role: 'QA Automation Engineer · Intern', description: 'Built automation frameworks with Playwright and TypeScript, integrated GitLab and Xray pipelines, and improved test reporting by 30% with Allure.', location: 'London, ON · Remote' },
+  { company: 'Western University', letter: 'W', color: 'purple', date: '2022 — Apr 2027 (expected)', role: 'B.S. Computer Science · Honours Specialization', description: "3.8 GPA and two years on the Dean’s Honours List. Studying algorithms, data structures, systems programming, and machine learning.", location: 'London, ON' },
+];
