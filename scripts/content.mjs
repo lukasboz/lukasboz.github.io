@@ -3,7 +3,6 @@ export const profile = {
   email: 'lukasbozinov@gmail.com',
   github: 'https://github.com/lukasboz',
   linkedin: 'https://www.linkedin.com/in/lukas-bozinov-b52479244/',
-  devpost: 'https://devpost.com/lukasboz',
   location: 'Markham, Ontario, Canada',
 };
 
