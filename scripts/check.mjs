@@ -7,7 +7,7 @@ import { projects } from './content.mjs';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const dist = resolve(root, 'dist');
 const files = readdirSync(dist, { recursive: true }).filter(file => file.endsWith('.html'));
-assert.equal(files.length, 13, 'Every portfolio page must be built.');
+assert.equal(files.length, projects.length + 7, 'Every portfolio page must be built.');
 let links = 0;
 for (const file of files) {
   const path = resolve(dist, file);
@@ -35,7 +35,7 @@ for (const [, target] of readFileSync(resolve(dist, 'styles.css'), 'utf8').match
   assert.ok(existsSync(resolve(dist, target)), `Missing CSS asset: ${target}`);
 }
 const index = JSON.parse(readFileSync(resolve(dist, 'assets/search-index.json'), 'utf8'));
-assert.equal(index.length, 12, 'Search should include six projects and six pages.');
+assert.equal(index.length, projects.length + 6, 'Search should include every project and six pages.');
 for (const entry of index) assert.ok(existsSync(resolve(dist, entry.url)), `Missing search destination: ${entry.url}`);
 for (const project of projects) assert.ok(index.some(entry => entry.url === `projects/${project.slug}.html`));
 assert.ok(existsSync(resolve(dist, '.nojekyll')));

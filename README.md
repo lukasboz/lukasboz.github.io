@@ -1,8 +1,8 @@
 # Lukas Bozinov — portfolio
 
-A complete, static portfolio inspired by the [Me Online Framer template](https://meonline.framer.website/). It uses a landscape home screen, browser-style navigation, a keyboard-accessible search dialog, and project pages styled like search results.
+A complete, static portfolio inspired by the [Me Online Framer template](https://meonline.framer.website/). It uses a landscape home screen, browser-style navigation, editable inline search, a tabbed About profile card, and project pages styled like search results.
 
-The site includes home, work, about, contact, resume, gallery, six project detail pages, and a custom 404. All original project URLs are preserved. There are no packages to install, backend services, API keys, or Framer runtime dependencies. The landscape from the supplied reference is stored locally; project interface concepts are drawn with HTML/CSS/SVG and labeled as concepts.
+The site includes home, work, about, contact, resume, gallery, seven project detail pages, and a custom 404. All original project URLs are preserved. There are no packages to install, backend services, API keys, or Framer runtime dependencies. The landscape from the supplied reference is stored locally; project interface concepts are drawn with HTML/CSS/SVG and labeled as concepts.
 
 ## Develop locally
 
@@ -38,6 +38,8 @@ For another static host, run `npm run build` and upload the contents of `dist/`.
 
 Run `npm run build` after editing. Commit the generated HTML and search index together with their sources.
 
-Search opens with **Ctrl/⌘ K** or **/**. Use arrow keys and Enter to open a result; Escape closes the dialog. The work page filters projects by category.
+Type directly into the search field. **Ctrl/⌘ K** or **/** focuses it. Suggestions appear beneath the field as you type; arrow keys and Enter open a suggestion, and Enter without a selection opens the Work page with the query. Search on Work filters the project list directly and combines with category filters. Escape hides suggestions without opening a modal.
+
+About links open the profile card over the current page, following the supplied `.source/image.png` reference. Skills, Experience, and Fun facts are keyboard-accessible tabs. `about.html` also works as a standalone page. TETR.IO RL is listed from [its repository](https://github.com/lukasboz/TETR.IO-RL), with a dedicated project page and search entry.
 
 The contact form opens a prefilled draft in the visitor’s email app; it does not submit to a server. Direct email, LinkedIn, and GitHub links are also available. The resume page includes **Print / save PDF** and a dedicated print layout, replacing the previous missing PDF link. Existing biographical and project details were carried over from the original site.

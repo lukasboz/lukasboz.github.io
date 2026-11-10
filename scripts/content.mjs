@@ -68,6 +68,20 @@ export const projects = [
     sections: [['The idea', 'YTMP3 provides a clean desktop interface for converting YouTube videos to MP3 audio files. Built with Python and CustomTkinter, it focuses on a straightforward workflow and reliable feedback.'], ['Reliability in the details', 'URL validation checks links before processing. Pytubefix handles stream extraction, while real-time progress and error handling keep users informed when downloads encounter network issues or invalid links.']],
     features: ['CustomTkinter desktop interface', 'YouTube URL validation', 'Real-time download progress', 'Error handling for invalid URLs and network issues', 'Pytubefix stream extraction'],
   },
+  {
+    slug: 'tetrio-rl', name: 'TETR.IO RL', short: 'TETR.IO', icon: 'blocks', color: 'purple',
+    category: 'AI & ML', categoryId: 'ai', role: 'Developer', type: 'Reinforcement learning project',
+    tagline: 'Learning, one placement at a time.',
+    summary: 'A Double DQN agent for modern block stacking, trained with Python and PyTorch. Includes an offline versus arena, standalone HTML replays, and portable browser and Rust model exports.',
+    stack: ['Python', 'PyTorch', 'Double DQN', 'JavaScript', 'Rust'],
+    tools: ['Python', 'PyTorch', 'Double DQN', 'JavaScript', 'Rust', 'HTML replay', 'Offline arena'],
+    github: 'https://github.com/lukasboz/TETR.IO-RL',
+    sections: [
+      ['Learning legal placements', 'TETR.IO RL is a local reinforcement learning project for modern block stacking. A Double DQN trained with Python and PyTorch ranks legal placements, with random and fixed heuristic policies providing useful baselines.', 'Evaluation compares policies on identical held-out seeds. The initial trained checkpoint provides a starting point for further experimentation; the local stacking results do not establish competitive multiplayer strength.'],
+      ['Watch it, play it, export it', 'A standalone HTML replay makes the agent’s decisions visible without running a server. The offline versus arena embeds the learned model and supports human-versus-DQN play, DQN-versus-heuristic matches, and two DQN players exchanging garbage, with adjustable bot speed.', 'Portable JavaScript and Rust model exports make it possible to run the learned policy beyond the Python training environment. The project also includes an optional TETR.IO custom-room connector; the main playable experience is the standalone local arena.'],
+    ],
+    features: ['Double DQN training that ranks legal block placements', 'Random and heuristic baselines evaluated on matching seeds', 'Standalone HTML replay with no server required', 'Offline arena with human-versus-agent and agent-versus-agent modes', 'Adjustable bot speed and embedded learned weights', 'Portable browser and Rust model exports'],
+  },
 ];
 
 export const experience = [
