@@ -44,6 +44,8 @@ Type directly into the search field. **Ctrl/⌘ K** or **/** focuses it. Suggest
 
 About links open the profile card over the current page, following the supplied `.source/image.png` reference. Skills, Experience, and Fun facts are keyboard-accessible tabs. `about.html` also works as a standalone page. TETR.IO RL is listed from [its repository](https://github.com/lukasboz/TETR.IO-RL), with a dedicated project page and search entry.
 
+Gallery cards open their respective GitHub repositories in a new tab. The Math Challenge card is marked **Private repo** because its `math-duels` repository requires access.
+
 The contact form opens a prefilled draft in the visitor’s email app; it does not submit to a server. Direct email, LinkedIn, and GitHub links are also available. The resume page follows the supplied `.source/lukas-resume.pdf`, includes **Download PDF** for the original document, and retains **Print / save PDF** for the web version. The distributable PDF is stored in `assets/lukas-resume.pdf`; builds do not require `.source/`.
 
 Dark mode initially follows the visitor’s system preference. The sun/moon button in the header or About card saves an explicit choice across pages and reloads, and syncs it across tabs. Light mode uses the original landscape; dark mode uses `assets/Golden Sunset Over Rolling Hills.png`. Print styles remain light in both themes.

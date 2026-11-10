@@ -23,6 +23,7 @@ export const projects = [
   },
   {
     slug: 'chef-ai', name: 'Chef.ai', short: 'Chef.ai', icon: 'chef', color: 'green',
+    github: 'https://github.com/lukasboz/AI-Chef',
     category: 'AI & ML', categoryId: 'ai', role: 'Developer', type: 'Machine learning application',
     tagline: 'Less waste. More possibility.',
     summary: 'Smarter meals from the groceries you already have. Machine learning connects expiry dates, consumption patterns, and meal recommendations.',
@@ -33,6 +34,7 @@ export const projects = [
   },
   {
     slug: 'facial-recognition', name: 'Facial Recognition', short: 'Vision', icon: 'scan', color: 'purple',
+    github: 'https://github.com/lukasboz/OpenCV-Face-RCGN',
     category: 'Computer vision', categoryId: 'vision', role: 'Developer', type: 'Computer vision application',
     tagline: 'Recognition. In real time.',
     summary: 'A real-time security system built with C++ and OpenCV. Multi-face recognition, role-based access, and a live monitoring interface.',
@@ -42,6 +44,7 @@ export const projects = [
   },
   {
     slug: 'math-challenge', name: 'Math Challenge', short: 'Math', icon: 'math', color: 'orange',
+    github: 'https://github.com/lukasboz/math-duels', githubPrivate: true,
     category: 'Web', categoryId: 'web', role: 'Full-Stack Developer', type: 'Multiplayer web application',
     tagline: 'Think fast. Play together.',
     summary: 'A real-time multiplayer math platform with live challenges, synchronized game sessions, persistent profiles, and competitive leaderboards.',
@@ -51,6 +54,7 @@ export const projects = [
   },
   {
     slug: 'easyconvert', name: 'EasyConvert', short: 'Convert', icon: 'convert', color: 'red',
+    github: 'https://github.com/lukasboz/EasyConvert',
     category: 'Tools', categoryId: 'tools', role: 'Developer', type: 'File conversion utility',
     tagline: 'New format. Same simplicity.',
     summary: 'A focused file conversion utility with drag-and-drop, batch processing, and clear progress feedback. Less friction between file formats.',
@@ -60,6 +64,7 @@ export const projects = [
   },
   {
     slug: 'ytmp3', name: 'YTMP3', short: 'YTMP3', icon: 'music', color: 'pink',
+    github: 'https://github.com/lukasboz/YouTube-To-MP3',
     category: 'Tools', categoryId: 'tools', role: 'Developer', type: 'Desktop application',
     tagline: 'Your audio. Ready to go.',
     summary: 'A Python desktop application for converting YouTube videos to MP3, with URL validation, live progress, and a CustomTkinter interface.',
